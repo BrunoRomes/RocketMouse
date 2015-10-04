@@ -1,0 +1,27 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class MouseController : MonoBehaviour {
+
+	public float jetpackForce = 75.0f;
+
+	void FixedUpdate () 
+	{
+		bool jetpackActive = Input.GetButton("Fire1");
+		
+		if (jetpackActive)
+		{
+			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jetpackForce));
+		}
+	}
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+}
